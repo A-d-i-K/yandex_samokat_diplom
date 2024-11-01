@@ -24,3 +24,12 @@ order_response = post_new_order(data.order_body)
 def get_order(track_order):
     return requests.get(configuration.URL_SERVICE+configuration.PUT_ORDER,
                         params=track_order)
+
+# Попытка упрощения
+# def send_order_request(endpoint, data=None, method='POST'):
+#     url = configuration.URL_SERVICE + endpoint
+#     response = requests.request(method, url, json=data)
+#     return response
+#
+# order_response = send_order_request(configuration.CREATE_ORDER, data.order_body)
+# order_status = send_order_request(configuration.PUT_ORDER, track_order, method='GET')
